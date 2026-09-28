@@ -96,41 +96,43 @@ animation:fadeInImg 1.2s ease forwards;
 /* текст поверх */
 .block2-text {
     position: absolute;
-    top: 50%;             /* Сдвигаем блок вниз (было 0, стало 50% или подберите свое значение) */
-    left: 50%;            /* Сдвигаем блок вправо */
-    transform: translate(-50%, -50%); /* Центрируем сам блок */
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Центрируем строки внутри блока */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Убрали flex, он здесь только мешает */
     font-family: 'GentlemensScript', cursive;
-    width: 100%;          /* Или задайте нужную ширину */
 }
 
 /* строки текста */
 .line {
-    /* УБРАЛИ position: absolute; и transform: translateY(20px); */
+    position: absolute;
     color: #000000;
     font-size: 28pt;
     opacity: 0;
-    /* Добавляем отступы между строками, если нужно */
-    margin-bottom: 5px; 
+    /* Задаем общее выравнивание для всех строк, как в рабочем блоке */
+    /* Значение 21% из вашего старого кода (подберите под ваши картинки) */
+    right: 21%; 
+    text-align: right;
 }
 
-/* анимация по очереди */
+/* Анимация по очереди и точная позиция для каждой строки */
 .line1 {
     animation: fadeText 0.8s ease forwards;
     animation-delay: 1.2s;
-    /* УБРАЛИ top: 67%; и right: 21%; — они больше не нужны, так как блок центрирован */
+    top: 67%; /* Высота для первой строки (например, Фамилия) */
 }
 
-/* Добавьте анимации для остальных строк, если их не было */
 .line2 {
     animation: fadeText 0.8s ease forwards;
-    animation-delay: 1.5s; /* Задержка побольше */
+    animation-delay: 1.5s;
+    top: 54%; /* Высота для второй строки (например, Имя). Отнимаем примерно 13% от top первой строки */
 }
+
 .line3 {
     animation: fadeText 0.8s ease forwards;
-    animation-delay: 1.8s; /* Еще больше */
+    animation-delay: 1.8s;
+    top: 41%; /* Высота для третьей строки (например, Отчество) */
 }
 
 /* keyframes */
