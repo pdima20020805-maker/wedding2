@@ -93,48 +93,49 @@ opacity:0;
 animation:fadeInImg 1.2s ease forwards;
 }
 
-/* ===== БЛОК 2: ТЕКСТ ===== */
-
-/* Контейнер для текста в блоке 2 */
-.block2 .block2-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'GentlemensScript', cursive;
+/* текст поверх */
+.block2-text{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+transform:translate(-50%, -50%);
+display:flex;
+flex-direction:column;
+align-items:center;
+font-family: 'GentlemensScript', cursive;
 }
 
-/* Общие стили для строк ТОЛЬКО в блоке 2 */
-.block2 .line {
-    position: absolute;
-    color: #000000;
-    font-size: 28pt;
-    opacity: 0;
-    
-    /* Выравниваем текст по центру невидимой области */
-    width: 45%;        /* Ширина области с клеточками (подберите, если нужно) */
-    left: 5%;          /* Сдвиг всей области влево/вправо */
-    text-align: center;/* Центрируем текст внутри этой области */
+/* строки текста */
+.line{
+position: absolute;
+color:#000000;
+font-size:28pt;
+opacity:0;
+transform:translateY(20px);
 }
 
-/* Позиция и анимация для каждой строки в блоке 2 */
-.block2 .line1 {
-    animation: fadeText 0.8s ease forwards;
-    animation-delay: 1.2s;
-    top: 80%;          /* Высота для фамилии "Парфенов" */
+/* анимация по очереди */
+.line1{
+animation:fadeText 0.8s ease forwards;
+animation-delay:1.2s;
+top:  67%;                /* вверх / вниз — основной контроль */
+right: 21%;                /* ← центр по горизонтали */
 }
 
-.block2 .line2 {
-    animation: fadeText 0.8s ease forwards;
-    animation-delay: 1.5s;
-    top: 67%;          /* Высота для имени "Дмитрий" */
+.line2{
+animation:fadeText 0.8s ease forwards;
+animation-delay:1.8s;
+top:  85%;                /* вверх / вниз — основной контроль */
+right: 30%;     
 }
 
-.block2 .line3 {
-    animation: fadeText 0.8s ease forwards;
-    animation-delay: 1.8s;
-    top: 54%;          /* Высота для отчества "Андреевич" */
+.line3{
+animation:fadeText 0.8s ease forwards;
+animation-delay:2.4s;
+top:  102%;                /* вверх / вниз — основной контроль */
+right: 11%;     
 }
 
 /* keyframes */
