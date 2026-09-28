@@ -94,48 +94,43 @@ animation:fadeInImg 1.2s ease forwards;
 }
 
 /* текст поверх */
-.block2-text{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-transform:translate(-50%, -50%);
-display:flex;
-flex-direction:column;
-align-items:center;
-font-family: 'GentlemensScript', cursive;
+.block2-text {
+    position: absolute;
+    top: 50%;             /* Сдвигаем блок вниз (было 0, стало 50% или подберите свое значение) */
+    left: 50%;            /* Сдвигаем блок вправо */
+    transform: translate(-50%, -50%); /* Центрируем сам блок */
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Центрируем строки внутри блока */
+    font-family: 'GentlemensScript', cursive;
+    width: 100%;          /* Или задайте нужную ширину */
 }
 
 /* строки текста */
-.line{
-position: absolute;
-color:#000000;
-font-size:28pt;
-opacity:0;
-transform:translateY(20px);
+.line {
+    /* УБРАЛИ position: absolute; и transform: translateY(20px); */
+    color: #000000;
+    font-size: 28pt;
+    opacity: 0;
+    /* Добавляем отступы между строками, если нужно */
+    margin-bottom: 5px; 
 }
 
 /* анимация по очереди */
-.line1{
-animation:fadeText 0.8s ease forwards;
-animation-delay:1.2s;
-top:  67%;                /* вверх / вниз — основной контроль */
-right: 21%;                /* ← центр по горизонтали */
+.line1 {
+    animation: fadeText 0.8s ease forwards;
+    animation-delay: 1.2s;
+    /* УБРАЛИ top: 67%; и right: 21%; — они больше не нужны, так как блок центрирован */
 }
 
-.line2{
-animation:fadeText 0.8s ease forwards;
-animation-delay:1.8s;
-top:  85%;                /* вверх / вниз — основной контроль */
-right: 30%;     
+/* Добавьте анимации для остальных строк, если их не было */
+.line2 {
+    animation: fadeText 0.8s ease forwards;
+    animation-delay: 1.5s; /* Задержка побольше */
 }
-
-.line3{
-animation:fadeText 0.8s ease forwards;
-animation-delay:2.4s;
-top:  102%;                /* вверх / вниз — основной контроль */
-right: 11%;     
+.line3 {
+    animation: fadeText 0.8s ease forwards;
+    animation-delay: 1.8s; /* Еще больше */
 }
 
 /* keyframes */
