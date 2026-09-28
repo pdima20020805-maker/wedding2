@@ -121,14 +121,14 @@ transform:translateY(20px);
 animation:fadeText 0.8s ease forwards;
 animation-delay:1.2s;
 top:  67%;                /* вверх / вниз — основной контроль */
-right: 21%;                /* ← центр по горизонтали */
+right: 16%;                /* ← центр по горизонтали */
 }
 
 .line2{
 animation:fadeText 0.8s ease forwards;
 animation-delay:1.8s;
 top:  85%;                /* вверх / вниз — основной контроль */
-right: 21%;     
+right: 16%;     
 }
 
 .line3{
