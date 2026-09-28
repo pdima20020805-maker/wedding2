@@ -128,7 +128,7 @@ right: 21%;                /* ← центр по горизонтали */
 animation:fadeText 0.8s ease forwards;
 animation-delay:1.8s;
 top:  85%;                /* вверх / вниз — основной контроль */
-right: 45%;     
+right: 21%;     
 }
 
 .line3{
