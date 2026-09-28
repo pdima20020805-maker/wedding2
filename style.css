@@ -122,19 +122,19 @@ animation:fadeInImg 1.2s ease forwards;
 .block2 .line1 {
     animation: fadeText 0.8s ease forwards;
     animation-delay: 1.2s;
-    top: 67%;          /* Высота для фамилии "Парфенов" */
+    top: 80%;          /* Высота для фамилии "Парфенов" */
 }
 
 .block2 .line2 {
     animation: fadeText 0.8s ease forwards;
     animation-delay: 1.5s;
-    top: 54%;          /* Высота для имени "Дмитрий" */
+    top: 67%;          /* Высота для имени "Дмитрий" */
 }
 
 .block2 .line3 {
     animation: fadeText 0.8s ease forwards;
     animation-delay: 1.8s;
-    top: 41%;          /* Высота для отчества "Андреевич" */
+    top: 54%;          /* Высота для отчества "Андреевич" */
 }
 
 /* keyframes */
