@@ -116,42 +116,26 @@ opacity:0;
 transform:translateY(20px);
 }
 
-/* анимация по очереди — ТОЛЬКО ДЛЯ БЛОКА 2 */
-
-/* Фамилия */
-.block2 .line1 {
-    animation: fadeText 0.8s ease forwards;
-    animation-delay: 1.2s;
-    top: 67%;                /* оставляем как было */
-    
-    right: auto;             /* отключаем старое правило */
-    left: 10%;               /* подберите значение, чтобы текст встал над клетками */
-    width: 40%;              /* ширина невидимой рамки */
-    text-align: center;      /* центрируем слово внутри рамки */
+/* анимация по очереди */
+.line1{
+animation:fadeText 0.8s ease forwards;
+animation-delay:1.2s;
+top:  67%;                /* вверх / вниз — основной контроль */
+right: 21%;                /* ← центр по горизонтали */
 }
 
-/* Имя — именно здесь была проблема */
-.block2 .line2 {
-    animation: fadeText 0.8s ease forwards;
-    animation-delay: 1.8s;
-    top: 85%;                /* оставляем как было */
-
-    right: auto;             /* отключаем старое правило */
-    left: 10%;               /* ТАКОЕ ЖЕ значение, как у line1 */
-    width: 40%;              /* ТАКОЕ ЖЕ значение, как у line1 */
-    text-align: center;      /* теперь "Дмитрий" встанет ровно по центру */
+.line2{
+animation:fadeText 0.8s ease forwards;
+animation-delay:1.8s;
+top:  85%;                /* вверх / вниз — основной контроль */
+right: 30%;     
 }
 
-/* Отчество */
-.block2 .line3 {
-    animation: fadeText 0.8s ease forwards;
-    animation-delay: 2.4s;
-    top: 102%;               /* оставляем как было */
-
-    right: auto;             /* отключаем старое правило */
-    left: 10%;               /* ТАКОЕ ЖЕ значение, как у line1 */
-    width: 40%;              /* ТАКОЕ ЖЕ значение, как у line1 */
-    text-align: center;
+.line3{
+animation:fadeText 0.8s ease forwards;
+animation-delay:2.4s;
+top:  102%;                /* вверх / вниз — основной контроль */
+right: 11%;     
 }
 
 /* keyframes */
